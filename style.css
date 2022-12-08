@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "Liber";
+    src: url(Fonts/Liber/LiberRegular.otf);
+
+    font-family: "Actay";
+    src:url(Fonts/Actay/Actay-Regular.otf);
+
+    font-family: "Morgenwalsh";
+    src:url(Fonts/Morgenwalsh/Morgenwalsh.otf);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+body{
+    position: relative;
+    background: #E1CBCB;
+    overflow-x: hidden;
+}
+
+
+ul{
+    list-style: none;
+}
+
+.logo{
+    position: absolute;
+    width: 239px;
+    height: 39px;
+    left: 87px;
+    text-decoration: none;
+    
+    font-family: 'Liber';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 40px;
+    color: #000000;
+    
+}
+
+.about{
+    position: absolute;
+    width: 131px;
+    height: 32px;
+    left: 1065px;
+    text-decoration: none;
+
+    font-family: 'Actay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 36px;
+    color: #000000;
+}
+
+.work{
+    position: absolute;
+    width: 74px;
+    height: 32px;
+    left: 1173px;
+    text-decoration: none;
+    
+    font-family: 'Actay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 36px;
+    color: #000000;
+}
+
+.contact{
+    position: absolute;
+    width: 120px;
+    height: 39px;
+    left: 1243px;
+    text-decoration: none;
+    
+    font-family: 'Actay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 36px;
+    color: #000000;
+}
+
+.cir__nav{
+    position: absolute;
+    width: 2.3rem;
+    height: 37px;
+    right: 87px;
+    top: 0px;
+}
+
+.hero__text{
+    position: absolute;
+    width: 1447px;
+    height: 666px;
+    left: 35px;
+    top: 89px;
+    
+    font-family: 'Morgenwalsh';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9rem;
+    line-height: 95.5%;
+
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.apple__pencil{
+    position: absolute;
+    width: 32rem;
+    height: 34rem;
+    left: 469px;
+    top: 113px;
+    z-index: -1;
+
+    
+    background: url(image.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.borealis{
+    position: absolute;
+    width: 31rem;
+    height: 35rem;
+    left: 298px;
+    top: 118.07px;
+    z-index: -3;
+    
+    background: url(Aurora Borealis.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: rotate(-7.38deg);
+}
+
+.graphic{
+    position: absolute;
+    width: 31rem;
+    height: 35rem;
+    left: 671px;
+    top: 118.07px;
+    z-index: -2;
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: rotate(7.38deg);
+}
+
+.btn{
+    position: absolute;
+    top: 3px;
+    right:86px;
+    z-index: 2;
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+.btn span{
+    width: 20px;
+    height: 2px;
+    background: black;
+    display: flex;
+    position: absolute;
+    transform: .3s;
+}
+
+.btn span:nth-child(1){
+    top: 20%;
+}
+
+.btn span:nth-child(2){
+    top: 80%;
+}
+
+.btn.is-active span{
+    background: white;
+}
+
+.btn.is-active span:nth-child(1){
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.btn.is-active span:nth-child(2){
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.menu{
+    background: #171717;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 100%;
+    z-index: 1;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu.is-active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu__list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.menu__items:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.menu__links{
+    position: relative;
+    font-family: "Actay";
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 48px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu__links::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 5px;
+    width: 0;
+    display: inline-flex;
+    background: #E1CBCB;
+    transition: .3s;
+}
+
+.menu__links:hover:after{
+    width: 100%;
+}
